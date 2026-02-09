@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # ส่วนของ Web Server (PHP)
+  web:
+    build: .
+    ports:
+      - "8081:80" 
+    depends_on:
+      - db
+    volumes:
+      - ./src:/var/www/html/ng4  
+    networks:
+      - app-network
+
+  # ส่วนของ Database (MySQL)
+  db:
+    image: mysql:8.0
+    container_name: ng4_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # รหัสผ่าน root
+      MYSQL_DATABASE: ng4_database       # ชื่อฐานข้อมูลที่จะสร้างให้
+      MYSQL_USER: user                   # ชื่อผู้ใช้
+      MYSQL_PASSWORD: password           # รหัสผ่านผู้ใช้
+    volumes:
+      - db_data:/var/lib/mysql           # เก็บข้อมูลถาวรแม้ปิด container
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql 
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8888:80"   
+    environment:
+      PMA_HOST: db
+      PMA_USER: user
+      PMA_PASSWORD: password
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
