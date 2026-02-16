@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_result($id, $firstname, $lastname, $hashed_password, $role, $approve);
             $stmt->fetch();
 
+            $hashed_password = is_null($hashed_password) ? '' : (string)$hashed_password;
+
             if (password_verify($password, $hashed_password)) {
                 // ✅ ตรวจสอบข้อความ "อนุมัติแล้ว"
                 if ($approve !== 'อนุมัติแล้ว') {
