@@ -189,7 +189,7 @@ function isChecked($fieldName, $value) {
             <div class="flex justify-between items-center pt-8 border-t">
                 <a href="form4.php" class="text-gray-500 hover:text-gray-700 font-bold">← ย้อนกลับ</a>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-3 rounded-xl font-bold shadow-lg transition-all hover:-translate-y-1 active:scale-95">
-                    ขั้นตอนถัดไป →
+                    ถัดไป →
                 </button>
             </div>
         </form>

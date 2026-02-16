@@ -66,7 +66,7 @@ $saved_image = isset($_SESSION['form6_image_data']) ? $_SESSION['form6_image_dat
             <div class="flex justify-between items-center pt-8 border-t">
                 <a href="form5.php" class="text-gray-500 font-bold">← ย้อนกลับ</a>
                 <button type="submit" id="submitBtn" class="bg-green-600 text-white px-12 py-4 rounded-xl font-bold shadow-lg">
-                    บันทึกข้อมูลทั้งหมด
+                    บันทึกข้อมูล
                 </button>
             </div>
         </form>

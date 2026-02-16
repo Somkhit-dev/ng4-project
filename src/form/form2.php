@@ -103,7 +103,7 @@ function getForm2Value($fieldName) {
                     ← ย้อนกลับ
                 </a>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-xl font-bold shadow-lg shadow-blue-200 transition-all hover:-translate-y-1 active:scale-95">
-                    ขั้นตอนถัดไป →
+                    ถัดไป →
                 </button>
             </div>
         </form>

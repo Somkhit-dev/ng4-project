@@ -117,7 +117,7 @@ function isIctChecked($index, $value) {
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">คุณลักษณะเฉพาะ <span class="text-red-500">*</span></label>
-                                <textarea name="item_specification[]" required rows="3" class="form-input-focus block w-full px-4 py-2 border border-gray-300 rounded-lg outline-none text-sm"><?= htmlspecialchars($_SESSION['form4']['item_specification'][$idx] ?? '') ?></textarea>
+                                <textarea name="item_specification[]" required placeholder="1. &#10;2. " rows="3" class="form-input-focus block w-full px-4 py-2 border border-gray-300 rounded-lg outline-none text-sm"><?= htmlspecialchars($_SESSION['form4']['item_specification'][$idx] ?? '') ?></textarea>
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">รายละเอียดอื่นๆ <span class="text-red-500">*</span></label>
@@ -152,7 +152,7 @@ function isIctChecked($index, $value) {
 
             <div class="flex justify-between items-center pt-8 border-t">
                 <a href="form3.php" class="text-gray-400 font-bold">← ย้อนกลับ</a>
-                <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-12 py-3 rounded-xl font-bold shadow-lg">ยืนยันข้อมูลหน้าถัดไป →</button>
+                <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-12 py-3 rounded-xl font-bold shadow-lg">ถัดไป →</button>
             </div>
         </form>
     </div>

@@ -219,9 +219,9 @@ function isChecked($fieldName, $value) {
             </section>
 
             <div class="flex justify-between items-center pt-8 border-t border-gray-100">
-                <p class="text-sm text-gray-400 italic font-light">ข้อมูลจะถูกบันทึกไว้ใน Session อัตโนมัติเมื่อกดถัดไป</p>
+                <p class="text-sm text-gray-400 italic font-light"></p>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-xl font-bold shadow-lg shadow-blue-200 transition-all hover:-translate-y-1 active:scale-95">
-                    ขั้นตอนถัดไป →
+                    ถัดไป →
                 </button>
             </div>
 
